@@ -1,0 +1,6 @@
+@import '../../styles/global.scss';
+
+.disabled {
+  color: $disabled-color;
+  cursor: not-allowed;
+}
