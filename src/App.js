@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <h1>Components Practice</h1>
-      <Icon disabled>
+      <Icon>
         <FaBeer />
       </Icon>
     </div>
