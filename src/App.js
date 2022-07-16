@@ -11,6 +11,9 @@ function App() {
       <Icon>
         <FaBeer />
       </Icon>
+      <Icon disabled>
+        <FaBeer />
+      </Icon>
     </div>
   );
 }
