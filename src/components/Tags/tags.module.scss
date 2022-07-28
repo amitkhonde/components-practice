@@ -1,0 +1,13 @@
+@import '../../styles/global.scss';
+
+
+.tag {
+  border: 1px solid $disabled-color;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+.selected {
+  background-color: $sky-blue;
+  border: 1px solid $blue;
+}
