@@ -1,0 +1,7 @@
+export const ACTION_TYPES = {
+  SELECT: 'SELECT',
+  DESELECT: 'DESELECT',
+  RESET: 'RESET',
+  ADD: 'ADD',
+  REMOVE: 'REMOVE',
+};
