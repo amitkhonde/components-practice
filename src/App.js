@@ -31,7 +31,7 @@ function App() {
     };
   }
 
-  function btnClick() {
+  function handleBtnClick() {
     // eslint-disable-next-line
     console.log('Button clicked');
   }
@@ -62,8 +62,10 @@ function App() {
         Remove Tag
       </button>
       <div>
-        <Button onClick={btnClick}>Submit</Button>
-        <Button isDisabled onClick={btnClick}>Submitted</Button>
+        <Button onClick={handleBtnClick}>Submit</Button>
+        <Button isDisabled onClick={handleBtnClick}>Submitted</Button>
+        <Button onClick={handleBtnClick} variant={Button.VARIANTS.SECONDARY}>Secondary</Button>
+        <Button onClick={handleBtnClick} variant={Button.VARIANTS.TERTIARY}>Tertiary</Button>
       </div>
     </div>
   );

@@ -6,25 +6,38 @@ import _noop from 'lodash/noop';
 
 import styles from './button.module.scss';
 
+const VARIANTS = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  TERTIARY: 'tertiary',
+}
+
 function Button(props) {
-  const { children, className = styles.primaryButton, disabledClassName = styles.disabledButton, isDisabled, onClick, } = props;
+  const { children, className, disabledClassName, isDisabled, onClick, variant } = props;
   return (
-    <button type='button' className={cx(className, { [disabledClassName]: isDisabled})} onClick={onClick}>
+    <button type='button' className={cx(styles[variant], className, { 
+        [styles.disabledButton]: isDisabled,
+        [disabledClassName]: isDisabled
+      })} onClick={onClick}>
       {children}
     </button>
   );
 }
 
+Button.VARIANTS = VARIANTS;
+
 Button.defaultProps = {
   children: null,
-  className: undefined,
-  disabledClassName: undefined,
+  variant: VARIANTS.PRIMARY,
+  className: '',
+  disabledClassName: '',
   isDisabled: false,
   onClick: _noop,
 };
 
 Button.propTypes = {
   children: PropTypes.node,
+  variant: PropTypes.string,
   className: PropTypes.string,
   disabledClassName: PropTypes.string,
   isDisabled: PropTypes.bool,

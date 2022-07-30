@@ -8,8 +8,22 @@
   cursor: pointer;
 }
 
-.primaryButton {
+.primary {
   @include primary-button;
+}
+
+.secondary {
+  @include primary-button;
+  background-color: $white;
+  color: $grey;
+  border: 1px solid $grey;
+}
+
+.tertiary {
+  @include primary-button;
+  background-color: transparent;
+  color: $blue;
+  border: none;
 }
 
 .disabledButton {
