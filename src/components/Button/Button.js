@@ -15,10 +15,10 @@ const VARIANTS = {
 function Button(props) {
   const { children, className, disabledClassName, isDisabled, onClick, variant } = props;
   return (
-    <button type='button' className={cx(styles[variant], className, { 
-        [styles.disabledButton]: isDisabled,
-        [disabledClassName]: isDisabled
-      })} onClick={onClick}>
+    <button type='button' className={cx(styles[variant], className, {
+      [styles.disabledButton]: isDisabled,
+      [disabledClassName]: isDisabled
+    })} onClick={onClick}>
       {children}
     </button>
   );
