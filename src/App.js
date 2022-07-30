@@ -62,7 +62,7 @@ function App() {
         Remove Tag
       </button>
       <div>
-        <Button onClick={handleBtnClick}>Submit</Button>
+        <Button onClick={handleBtnClick}>Primary</Button>
         <Button isDisabled onClick={handleBtnClick}>Submitted</Button>
         <Button onClick={handleBtnClick} variant={Button.VARIANTS.SECONDARY}>Secondary</Button>
         <Button onClick={handleBtnClick} variant={Button.VARIANTS.TERTIARY}>Tertiary</Button>
