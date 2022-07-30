@@ -1,0 +1,20 @@
+@import '../../styles/global.scss';
+
+@mixin primary-button {
+  padding: 0.4rem;
+  border: none;
+  color: $white;
+  background-color: $blue;
+  cursor: pointer;
+}
+
+.primaryButton {
+  @include primary-button;
+}
+
+.disabledButton {
+  background-color: $disabled-color;
+  color: $grey;
+  pointer-events: none;
+  cursor: not-allowed;
+}

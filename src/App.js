@@ -5,8 +5,8 @@ import _includes from 'lodash/includes';
 import { FaBeer } from 'react-icons/fa';
 
 import Icon from './components/Icon';
-
 import { useTags, Tag, Tags } from './components/Tags';
+import Button from './components/Button';
 
 function App() {
   const { addTag, removeTag, tags, selectedTagIds, selectTag, deselectTag } =
@@ -29,6 +29,11 @@ function App() {
 
       selectTag(id);
     };
+  }
+
+  function btnClick() {
+    // eslint-disable-next-line
+    console.log('Button clicked');
   }
 
   return (
@@ -56,6 +61,10 @@ function App() {
       <button type="button" onClick={deleteTag}>
         Remove Tag
       </button>
+      <div>
+        <Button onClick={btnClick}>Submit</Button>
+        <Button isDisabled onClick={btnClick}>Submitted</Button>
+      </div>
     </div>
   );
 }
