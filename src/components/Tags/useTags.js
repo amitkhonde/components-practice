@@ -40,6 +40,7 @@ function reducer(state, payload) {
     }
 
     default: {
+      // eslint-disable-next-line
       console.error(`${action} action not supported.`);
       return state;
     }

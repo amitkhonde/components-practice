@@ -1,0 +1,34 @@
+@import '../../styles/global.scss';
+
+@mixin primary-button {
+  padding: 0.4rem;
+  border: none;
+  color: $white;
+  background-color: $blue;
+  cursor: pointer;
+}
+
+.primary {
+  @include primary-button;
+}
+
+.secondary {
+  @include primary-button;
+  background-color: $white;
+  color: $grey;
+  border: 1px solid $grey;
+}
+
+.tertiary {
+  @include primary-button;
+  background-color: transparent;
+  color: $blue;
+  border: none;
+}
+
+.disabledButton {
+  background-color: $disabled-color;
+  color: $grey;
+  pointer-events: none;
+  cursor: not-allowed;
+}
